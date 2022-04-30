@@ -6,10 +6,9 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-import model.entites.Reservation;
+import model.entites.ReservationVeryBad;
 
-public class Ruim {
-
+public class BadSolution {
 	public static void main(String[] args) throws ParseException {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
@@ -25,7 +24,7 @@ public class Ruim {
 		if (!checkOut.after(checkIn)) {
 			System.out.println("Erro in reservation: Check-out date ust be after check-in date");
 		} else {
-			Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
+			ReservationVeryBad reservation = new ReservationVeryBad(roomNumber, checkIn, checkOut);
 			System.out.println("Reservation: " + reservation);
 
 			System.out.println();
@@ -34,18 +33,10 @@ public class Ruim {
 			checkIn = sdf.parse(sc.next());
 			System.out.print("Check-out date (dd/MM/yyyy): ");
 			checkOut = sdf.parse(sc.next());
-			
-			Date now = new Date();
-			if(checkIn.before(now) || checkOut.before(now)) {
-				System.out.println("Erro in reservation: Reservation dates for update must be future dates");
-			}
-			else if(!checkOut.after(checkIn)) {
-				System.out.println("Erro in reservation: Check-out date ust be after check-in date");
-			}
-			else {
-				reservation.updateDates(checkIn, checkOut);
-				System.out.println("Reservation: " + reservation);
-			}
+
+			reservation.updateDates(checkIn, checkOut);
+			System.out.println("Reservation: " + reservation);
+
 		}
 
 		sc.close();
