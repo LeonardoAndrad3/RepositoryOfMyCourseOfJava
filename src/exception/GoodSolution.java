@@ -42,7 +42,7 @@ public class GoodSolution {
 		catch(DomainException e) {
 			System.out.println(e.getMessage());
 		}
-		catch(Exception e) {
+		catch(RuntimeException e) {
 			System.out.println("Unexpected error");
 		}
 
