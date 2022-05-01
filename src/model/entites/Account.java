@@ -1,4 +1,6 @@
-package entities;
+package model.entites;
+
+import model.exceptions.AccountException;
 
 public class Account {
 
@@ -53,11 +55,22 @@ public class Account {
 
 	//Functions 
 	
-	public void withdraw(double amount) {
+	public void withdraw(double amount){
+		valitedWithdraw(amount);
 		balance -= amount;
 	}
 	
 	public void deposit(double amount) {
 		balance += amount;
 	}
+	
+	private void valitedWithdraw(double amount){
+		if(amount > withdrawLimit) {
+			throw new AccountException("Withdraw error: the amount exceeds withdraw limit");
+		}
+		else if(amount > balance) {
+			throw new AccountException("Withdraw erro: not enough balance");
+		}
+	}
+
 }
