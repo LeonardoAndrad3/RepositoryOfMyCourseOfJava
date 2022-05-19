@@ -15,7 +15,7 @@ public class ProgramFilePath {
 		File path = new File(strPath);
 		
 		System.out.println("getName: " + path.getName());
-		System.out.println("getParent: " + path.getParent());
+		System.out.println("get: " + path.getParent());
 		System.out.println("getPath: " + path.getPath());
 		
 		sc.close();
