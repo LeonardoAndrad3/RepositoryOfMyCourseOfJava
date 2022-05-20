@@ -28,6 +28,7 @@ public class Files {
 			pf.add(new ProductFileWrite(sc.nextLine().split(",")));
 			}
 			
+			
 			System.out.println();
 			for(ProductFileWrite product: pf) {
 				bw.write(product.toString());
