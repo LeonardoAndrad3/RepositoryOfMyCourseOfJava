@@ -2,7 +2,7 @@ package entities;
 
 import entities.enums.Color;
 
-public class Circle extends Shape{
+public class Circle extends AbstractShape{
 
 	private Double radius;
 	
@@ -14,8 +14,6 @@ public class Circle extends Shape{
 		super(color);
 		this.radius = radius;
 	}
-
-
 
 	public Double getRadius() {
 		return radius;
