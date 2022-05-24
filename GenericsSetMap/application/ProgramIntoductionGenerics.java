@@ -23,6 +23,7 @@ public class ProgramIntoductionGenerics {
 		System.out.println("First: " + ps.first());
 		
 		
+		sc.close();
 	}
 	
 	
