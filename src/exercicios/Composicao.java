@@ -32,7 +32,7 @@ public class Composicao {
 		System.out.print("Status: ");
 		String status = sc.nextLine();
 		
-		OrderComposicao oc = new OrderComposicao(new Client(name,email, birth), OrderStatus.valueOf(status));
+		OrderComposicao oc = new OrderComposicao(new Client(name,email), OrderStatus.valueOf(status));
 		System.out.println("How many items to this order?");
 		Integer quantity = sc.nextInt();
 		

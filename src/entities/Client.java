@@ -1,20 +1,18 @@
 package entities;
 
-import java.util.Date;
+import java.util.Objects;
 
 public class Client {
 
 	private String name;
 	private String email;
-	private Date date;
 	
 	public Client(){
 	}
 	
-	public Client(String name, String email, Date date) {
+	public Client(String name, String email) {
 		this.name = name;
 		this.email = email;
-		this.date = date;
 	}
 	
 	public String getName() {
@@ -33,12 +31,27 @@ public class Client {
 		this.email = email;
 	}
 
-	public Date getDate() {
-		return date;
+	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(email, name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Client other = (Client) obj;
+		return Objects.equals(email, other.email) && Objects.equals(name, other.name);
 	}
 
 	@Override
 	public String toString() {
-		return "Client [name=" + name + ", email=" + email + ", date=" + date + "]";
+		return "Client [name=" + name + ", email=" + email + "]";
 	}	
 }
