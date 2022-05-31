@@ -19,6 +19,7 @@ public class ProgramSet {
 
 		System.out.println(set.contains("Notebook"));
 		// contains check if exist
+		// If objects no possess "equals" implement, will be the comparation using reference
 
 		for (String p : set)
 			System.out.println(p);

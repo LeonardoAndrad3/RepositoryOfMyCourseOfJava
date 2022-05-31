@@ -11,7 +11,7 @@ public class ProgramTypeJoker {
 		List<Object> myObjs = new ArrayList<>();
 		List<Integer> myNumbers = new ArrayList<>();
 		
-//		myObjs = myNumbers; Error comp
+//		myObjs = myNumbers; Error compilation
 		
 		List<Integer> myInts = Arrays.asList(5,2,10);
 		printList(myInts);
