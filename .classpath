@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="interface"/>
 	<classpathentry kind="src" path="GenericsSetMap"/>
+	<classpathentry kind="src" path="PF&amp;ExpressoesLambda"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
