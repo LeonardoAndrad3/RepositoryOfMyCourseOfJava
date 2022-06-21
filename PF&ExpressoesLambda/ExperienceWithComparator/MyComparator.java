@@ -1,4 +1,4 @@
-package ExperienceWithComparator;
+package experienceWithComparator;
 
 import java.util.Comparator;
 
