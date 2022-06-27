@@ -25,7 +25,7 @@ public class Product implements Comparable<Product>{
 		}
 		
 		public String priceTag() {
-			return name + " $ ," + String.format("%.2f", price);
+			return name + ", $" + String.format("%.2f", price);
 		}
 		
 		public static boolean staticProductPredicate(Product p) {
@@ -35,9 +35,22 @@ public class Product implements Comparable<Product>{
 		public boolean nonStaticProductPredicate() {
 			return price >= 100.00;
 		}
+		
+		public static void staticPriceUpdate(Product p) {
+			p.setPrice(p.getPrice() * 1.1);
+		}
+		
+		public void noStaticPriceUpdate() {
+			setPrice(getPrice() * 1.1);
+		}
 
 		@Override
 		public int compareTo(Product o) {
 			return price.compareTo(o.getPrice());
+		}
+		
+		@Override
+		public String toString() {
+			return name + ", $" + String.format("%.2f", price);
 		}
 	}

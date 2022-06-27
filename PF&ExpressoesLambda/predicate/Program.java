@@ -11,6 +11,8 @@ public class Program {
 
 	public static void main(String[] args) {
 		
+		//Predicate is interface that return boolean
+		
 		List<Product> list = new ArrayList<>();
 		
 		list.add(new Product("TV", 900.00));
@@ -37,8 +39,7 @@ public class Program {
 		//Lambda expression inline;
 		list.removeIf(x -> x.getPrice() >= 100);
 		
-		for(Product p: list)
+		for(Product p: list) 
 			System.out.println(p.priceTag());
 	}
-
 }
