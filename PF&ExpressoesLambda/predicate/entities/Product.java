@@ -43,6 +43,14 @@ public class Product implements Comparable<Product>{
 		public void noStaticPriceUpdate() {
 			setPrice(getPrice() * 1.1);
 		}
+		
+		public static String staticUpperCaseName(Product p) {
+			return p.getName().toUpperCase();
+		}
+		
+		public String noStaticUpperCaseName() {
+			return name.toUpperCase();
+		}
 
 		@Override
 		public int compareTo(Product o) {
