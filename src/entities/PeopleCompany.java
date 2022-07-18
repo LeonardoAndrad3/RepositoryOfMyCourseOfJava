@@ -3,9 +3,9 @@ package entities;
 public class PeopleCompany extends Contribute {
 
 	private Integer employee;
-		
+
 	public PeopleCompany() {super();}
-	
+
 	public PeopleCompany(String name, Double income, Integer employee) {
 		super(name, income);
 		this.employee = employee;
@@ -34,6 +34,6 @@ public class PeopleCompany extends Contribute {
 		return auxTax;
 	}
 
-	
-	
+
+
 }

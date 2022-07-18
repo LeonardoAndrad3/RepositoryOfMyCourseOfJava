@@ -9,18 +9,18 @@ import model.entites.Contract;
 import model.entites.Installment;
 
 public class ProcessPayment {
-	
+
 	private Double amount;
 	private Date contractData;
 	private Integer installments;
-	
+
 	private ServicePayment service;
 	List<Installment> list = new ArrayList<>();
-	
+
 	public ProcessPayment() {
-		
+
 	}
-	
+
 	public ProcessPayment(Contract ct, Integer installments, ServicePayment service) {
 		this.amount = ct.getTotalValue();
 		this.contractData = ct.getDate();
@@ -60,7 +60,7 @@ public class ProcessPayment {
 	public void setService(ServicePayment service) {
 		this.service = service;
 	}
-	
+
 	public List<Installment> getList() {
 		return list;
 	}
@@ -69,16 +69,16 @@ public class ProcessPayment {
 		double pricePerInstallment = amount/installments;
 		Calendar c = Calendar.getInstance();
 		c.setTime(getContractData());
-		
+
 		for(int i=1;i<=installments;i++) {
 			double taxInstallment = service.calcTaxInstallment(pricePerInstallment, i);
 			c.add(Calendar.MONTH, 1);
 			list.add(new Installment(c.getTime(), taxInstallment));
 		}
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 }

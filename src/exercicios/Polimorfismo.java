@@ -19,11 +19,11 @@ public class Polimorfismo {
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		List<Product> product = new ArrayList<>();
-		
+
 		System.out.println("Welcome to importedPlus");
 		System.out.print("Enter the number of products: ");
 		int n = sc.nextInt();
-		
+
 		for(int i = 1; i<=n; i++) {
 			System.out.println("Product #"+i+" data: ");
 			System.out.print("Common, used or imported (c/u/i)? ");
@@ -37,38 +37,38 @@ public class Polimorfismo {
 				case 'c':
 					product.add(new Product(name, price));
 				break;
-					
+
 				case 'u':
 					System.out.print("Manusfacture date (DD/MM/YYYY): ");
 					sc.nextLine();
 					Date mDate = sdf.parse(sc.nextLine());
 					product.add(new UsedProduct(name, price, mDate));
 				break;
-				
+
 				case 'i':
 					System.out.print("Customs fee: ");
 					double customsFee = sc.nextDouble();
 					product.add(new ImportedProduct(name, price, customsFee));
 				break;
-				
+
 				default:
 					System.out.println();
 					System.out.println("Sorry, the product not found!");
 				break;
 			}
 		}
-		
+
 		System.out.println();
-		
+
 		if(product.size() != 0) {
 			System.out.println("PRICE TAGS: ");
-			
+
 			for(Product x : product) {
 				System.out.println(x.priceTag());
 			}
 		}
-		
-		
+
+
 		sc.close();
 	}
 

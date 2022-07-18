@@ -3,13 +3,13 @@ package entities;
 public class PeoplePhysic extends Contribute {
 
 	private Double spentWithHealth;
-	
+
 	public PeoplePhysic() {}
-	
+
 	public PeoplePhysic(String name, Double income) {
 		super(name, income);
 	}
-	
+
 	public PeoplePhysic(String name, Double income, Double spentWithHealth) {
 		super(name, income);
 		this.spentWithHealth = spentWithHealth;
@@ -27,7 +27,7 @@ public class PeoplePhysic extends Contribute {
 	public double tax() {
 		double auxTax = 0;
 		if(income < 20000) {
-				auxTax = (income*0.15)-(spentWithHealth*0.50);		
+				auxTax = (income*0.15)-(spentWithHealth*0.50);
 		} else if(income >= 20000) {
 				auxTax = (income*0.25)-(spentWithHealth*0.50);
 		}

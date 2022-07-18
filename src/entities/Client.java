@@ -6,15 +6,15 @@ public class Client {
 
 	private String name;
 	private String email;
-	
+
 	public Client(){
 	}
-	
+
 	public Client(String name, String email) {
 		this.name = name;
 		this.email = email;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -31,7 +31,7 @@ public class Client {
 		this.email = email;
 	}
 
-	
+
 
 	@Override
 	public int hashCode() {
@@ -42,9 +42,7 @@ public class Client {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if ((obj == null) || (getClass() != obj.getClass()))
 			return false;
 		Client other = (Client) obj;
 		return Objects.equals(email, other.email) && Objects.equals(name, other.name);
@@ -53,5 +51,5 @@ public class Client {
 	@Override
 	public String toString() {
 		return "Client [name=" + name + ", email=" + email + "]";
-	}	
+	}
 }

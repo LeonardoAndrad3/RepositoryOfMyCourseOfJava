@@ -20,7 +20,7 @@ public class ComboDevice extends Device implements Scanner,Printer{
 	public void processDoc(String doc) {
 		System.out.println("Combo processing: " + doc);
 	}
-	
-	
-	
+
+
+
 }

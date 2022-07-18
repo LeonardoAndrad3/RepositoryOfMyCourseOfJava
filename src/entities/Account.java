@@ -5,17 +5,17 @@ public class Account {
 	private Integer number;
 	private String holder;
 	protected Double balance;
-	private Double withdrawLimit; 
-		
+	private Double withdrawLimit;
+
 	public Account() {}
-	
+
 	public Account(Integer number, String holder, Double balance,Double withdrawLimit) {
 		this.number = number;
 		this.holder = holder;
 		this.balance = balance;
 		this.withdrawLimit = withdrawLimit;
 	}
-	
+
 	public Account(Integer number, String holder, Double balance) {
 		super();
 		this.number = number;
@@ -51,12 +51,12 @@ public class Account {
 		return balance;
 	}
 
-	//Functions 
-	
+	//Functions
+
 	public void withdraw(double amount) {
 		balance -= amount;
 	}
-	
+
 	public void deposit(double amount) {
 		balance += amount;
 	}

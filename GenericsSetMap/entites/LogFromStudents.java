@@ -27,16 +27,14 @@ public class LogFromStudents {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if ((obj == null) || (getClass() != obj.getClass()))
 			return false;
 		LogFromStudents other = (LogFromStudents) obj;
 		return Objects.equals(idStudent, other.idStudent);
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 }

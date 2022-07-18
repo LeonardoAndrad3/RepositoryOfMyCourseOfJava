@@ -11,9 +11,9 @@ public class OrderComposicao {
 	private Date moment = new Date();
 	private OrderStatus status;
 	private Client client;
-	
-	List<OrderItem> list = new ArrayList<>();	
-	
+
+	List<OrderItem> list = new ArrayList<>();
+
 	public OrderComposicao() {
 	}
 
@@ -51,10 +51,10 @@ public class OrderComposicao {
 	}
 
 	public void addItem(OrderItem item) {
-		list.add(item);	
+		list.add(item);
 	}
 	public void removeItem(OrderItem item) {
-		list.remove(item);	
+		list.remove(item);
 	}
 
 	@Override

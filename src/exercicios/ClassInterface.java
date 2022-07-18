@@ -18,7 +18,7 @@ public class ClassInterface {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		
+
 		System.out.println("Enter contract data: ");
 		System.out.print("Number: ");
 		int number = sc.nextInt();
@@ -29,17 +29,17 @@ public class ClassInterface {
 		double contractValue = sc.nextDouble();
 		System.out.print("Enter number of installments: ");
 		int installments = sc.nextInt();
-		
+
 		Contract ct = new Contract(number, date, contractValue);
 		ProcessPayment pp = new ProcessPayment(ct, installments, new PaymentOnline());
-		
+
 		System.out.println();
 		System.out.println("Installments: ");
 		for(Installment t : pp.getList()) {
 			System.out.println(sdf.format(t.getDueDate())+" - " + t.getAmount());
 		}
-		
-		
+
+
 		sc.close();
 	}
 }

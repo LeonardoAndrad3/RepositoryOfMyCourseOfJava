@@ -3,7 +3,7 @@ package services;
 public class BrazilInterestService implements InterestService {
 
 	private Double interesRent;
-	
+
 	public BrazilInterestService(Double interesRent) {
 		this.interesRent = interesRent;
 	}

@@ -11,14 +11,14 @@ import entities.OutsourcedEmployee;
 public class Polimorfismo {
 
 	public static void main(String [] args) {
-		
+
 		Scanner sc = new Scanner(System.in);
 		Locale.setDefault(Locale.US);
 		List<Employee> list = new ArrayList<>();
-		
+
 		System.out.print("Enter the number of employees: ");
 		int n = sc.nextInt();
-		
+
 		for(int i = 1; i<= n; i++) {
 			System.out.println("Employee #" + i + " data:");
 			System.out.print("Outsourced (y/n)?");
@@ -36,16 +36,16 @@ public class Polimorfismo {
 				list.add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
 			}else {
 				list.add(new Employee(name, hours, valuePerHour));
-			}	
+			}
 		}
-		
+
 		System.out.println();
 		System.out.println("PAYMENT: ");
 		for(Employee emp : list) {
 			System.out.println(emp.getName() + " - $ " + String.format("%.2f", emp.payment()));
 		}
-		
+
 		sc.close();
 	}
-	
+
 }

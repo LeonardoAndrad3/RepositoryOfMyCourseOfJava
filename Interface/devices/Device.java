@@ -3,7 +3,7 @@ package devices;
 public abstract class Device {
 
 	private String serialNumber;
-	
+
 	public Device(String serialNumber) {
 		this.serialNumber = serialNumber;
 	}
@@ -15,6 +15,6 @@ public abstract class Device {
 	public void setSerialNumber(String serialNumber) {
 		this.serialNumber = serialNumber;
 	}
-	
+
 	public abstract void processDoc(String doc);
 }

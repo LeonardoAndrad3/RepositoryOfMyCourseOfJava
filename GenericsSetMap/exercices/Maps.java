@@ -6,20 +6,19 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class Maps {
 
 	public static void main(String[] args){
-		
+
 		File path = new File("c:\\Users\\leona\\out\\out.txt");
 		Map<String,Integer> votes = new LinkedHashMap<>();
-		
+
 		try(BufferedReader br = new BufferedReader(new FileReader(path))){
-			
+
 			System.out.println("Enter file full path: " + path.getPath());
-			
-			String line = br.readLine(); 
+
+			String line = br.readLine();
 			while(line != null) {
 				String[] person = line.split(",");
 				if(votes.containsKey(person[0])) {
@@ -31,10 +30,10 @@ public class Maps {
 
 				line = br.readLine();
 			}
-			
+
 			for(String key : votes.keySet())
 				System.out.println(key+": "+votes.get(key));
-			
+
 		}
 		catch(IOException e){
 			e.printStackTrace();

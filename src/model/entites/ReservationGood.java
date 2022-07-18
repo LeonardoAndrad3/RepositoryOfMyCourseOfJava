@@ -18,7 +18,7 @@ public class ReservationGood {
 
 	public ReservationGood(Integer roomNumber, Date checkIn, Date checkOut) throws DomainException {
 		updateDates(checkIn, checkOut);
-	
+
 		this.roomNumber = roomNumber;
 		this.checkIn = checkIn;
 		this.checkOut = checkOut;

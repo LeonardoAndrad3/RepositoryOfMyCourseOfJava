@@ -14,13 +14,13 @@ public class ProgramJokerDelimited {
 		List<Shape> listShape = new ArrayList<>();
 		listShape.add(new Rectangle(Color.BLACK,3.0,2.0));
 		listShape.add(new Circle(Color.BLACK,3.0));
-		
+
 		List<Circle> listCircle = new ArrayList<>();
-		
+
 		System.out.println("Total area: " + totalArea(listShape));
-		
+
 	}
-	
+
 	public static double totalArea(List<? extends Shape> list) {
 		double sum = 0;
 		for(Shape s : list) sum+=s.area();

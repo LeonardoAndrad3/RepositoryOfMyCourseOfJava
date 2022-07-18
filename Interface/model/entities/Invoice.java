@@ -32,7 +32,7 @@ public class Invoice {
 	public Double getTotalPayment() {
 		return getBasicPayment() + getTax();
 	}
-	
+
 	@Override
 	public String toString() {
 		return "" + tax + basicPayment;

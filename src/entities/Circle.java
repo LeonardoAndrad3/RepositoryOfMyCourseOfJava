@@ -5,7 +5,7 @@ import entities.enums.Color;
 public class Circle extends AbstractShape{
 
 	private Double radius;
-	
+
 	public Circle() {
 		super();
 	}
@@ -28,5 +28,5 @@ public class Circle extends AbstractShape{
 		// TODO Auto-generated method stub
 		return Math.PI * radius * radius;
 	}
- 
+
 }

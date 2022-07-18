@@ -3,7 +3,7 @@ package entities;
 public class SavingsAccount extends Account {
 
 	private Double interestRate;
-	
+
 	public SavingsAccount() {
 		super();
 	}
@@ -20,13 +20,13 @@ public class SavingsAccount extends Account {
 	public void setInterestRate(Double interestRate) {
 		this.interestRate = interestRate;
 	}
-	
+
 	public void updateBalance() {
 		balance += balance * interestRate;
 	}
-	
+
 	//O override é para sobrescrever um método
-	
+
 	@Override
 	public final void withdraw(double amount) {
 		balance -= amount;

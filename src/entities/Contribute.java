@@ -4,10 +4,10 @@ public abstract class Contribute {
 
 	private String name;
 	protected Double income;
-	
+
 	public Contribute() {
 	}
-	
+
 	public Contribute(String name, Double income) {
 		this.name = name;
 		this.income = income;
@@ -28,6 +28,6 @@ public abstract class Contribute {
 	public void setIncome(Double income) {
 		this.income = income;
 	}
-	
+
 	public abstract double tax();
 }

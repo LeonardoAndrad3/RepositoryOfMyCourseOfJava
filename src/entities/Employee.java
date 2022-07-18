@@ -7,7 +7,7 @@ public class Employee {
 	private Double valuePerHour;
 	private String email;
 	private  Double salary;
-	
+
 	public Employee() {
 	}
 
@@ -16,7 +16,7 @@ public class Employee {
 		this.hours = hours;
 		this.valuePerHour = valuePerHour;
 	}
-	
+
 	public Employee(String name, String email, Double salary) {
 		this.name = name;
 		this.email = email;
@@ -42,7 +42,7 @@ public class Employee {
 	public Double getValuePerHour() {
 		return valuePerHour;
 	}
-	
+
 	public String getEmail() {
 		return email;
 	}
@@ -62,11 +62,11 @@ public class Employee {
 	public void setValuePerHour(Double valuePerHour) {
 		this.valuePerHour = valuePerHour;
 	}
-	
+
 	public double payment() {
 		return hours*valuePerHour;
 	}
-	
+
 	@Override
 	public String toString() {
 		return email + ", " + name + ", R$" + salary;

@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class Program {
 
 	public static void main(String[] args) {
-		
+
 		File file = new File("c:\\Users\\leona\\eclipse-workspace\\courseJava\\src\\archives\\in.txt");
 		Scanner sc = null;
-		
+
 		try {
 			sc = new Scanner(file);
 			while(sc.hasNextLine()) {
@@ -19,12 +19,12 @@ public class Program {
 		}
 		catch(IOException e) {
 			System.out.println("Error: " + e.getMessage());
-		} 
+		}
 		finally{
 			if(sc != null) {
 				sc.close();
 			}
 		}
 	}
-	
+
 }

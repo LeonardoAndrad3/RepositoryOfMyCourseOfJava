@@ -16,14 +16,14 @@ public class ProgramJokerDelimited2 {
 		copy(listInteger, listObject);
 		printList(listObject);
 	}
-	
+
 	public static void copy(List<? extends Number> source, List<? super Number> destiny) {
 		for(Number number: source) destiny.add(number);
 	}
-	
+
 	public static void printList(List<?> list) {
 		for(Object obj : list)System.out.print(obj + " ");
 		System.out.println();
 	}
-	
+
 }

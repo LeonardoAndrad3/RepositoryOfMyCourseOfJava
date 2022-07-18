@@ -4,8 +4,8 @@ package entities;
 public class BusinessAccount extends Account {
 
 	private Double loandLimit;
-	
-	
+
+
 	public BusinessAccount() {
 		super();
 	}
@@ -24,13 +24,13 @@ public class BusinessAccount extends Account {
 	public void setLoandLimit(Double loandLimit) {
 		this.loandLimit = loandLimit;
 	}
-	
+
 	public void loan(double amount) {
 		if(amount <= loandLimit) {
 			balance += amount - 10.0;
 		}
 	}
-	
+
 	@Override
 	public void withdraw(double amount) {
 		super.withdraw(amount);

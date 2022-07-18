@@ -1,10 +1,10 @@
 package entities;
 
 public class EmployeeComparable implements Comparable<EmployeeComparable>{
-	
+
 	private String name;
 	private Double salary;
-	
+
 	public EmployeeComparable(String name, Double salary) {
 		this.name = name;
 		this.salary = salary;

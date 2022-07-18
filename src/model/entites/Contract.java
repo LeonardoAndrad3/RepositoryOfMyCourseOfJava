@@ -8,10 +8,10 @@ public class Contract {
 	private Date date;
 	private Double totalValue;
 	private Installment installment;
-	
+
 	public Contract() {
 	}
-	
+
 	public Contract(Integer number, Date date, Double totalValue) {
 		this.number = number;
 		this.date = date;

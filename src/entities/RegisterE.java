@@ -5,13 +5,13 @@ public class RegisterE {
 	private Integer id;
 	private String name;
 	private Double salary;
-	
+
 	public RegisterE(Integer id, String name, Double slary) {
 		this.id = id;
 		this.name = name;
 		this.salary = slary;
 	}
-	
+
 	public Integer getId() {
 		return id;
 	}
@@ -38,7 +38,7 @@ public class RegisterE {
 	public String toString() {
 		return id + ", " + name + ", " + salary;
 	}
-	
-	
-	
+
+
+
 }
