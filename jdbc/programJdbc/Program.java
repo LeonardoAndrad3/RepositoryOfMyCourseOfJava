@@ -1,9 +1,12 @@
 package programJdbc;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import db.config.DB;
 
@@ -11,23 +14,43 @@ public class Program {
 
 	public static void main(String[]args) {
 		Connection conn = null;
-		Statement st = null;
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyy");
+		PreparedStatement st = null;
 		ResultSet rs = null;
 		
 		try {
 			conn = DB.getConnection();
 			
-			st = conn.createStatement();
+			st = conn.prepareStatement(
+					"Insert into seller(Name,Email,BirthDate,BaseSalary,DepartmentId)"
+					+ "Values(?,?,?,?,?)",
+					Statement.RETURN_GENERATED_KEYS
+					);
 			
-			rs = st.executeQuery("Select * from department");
+			st.setString(1, "Leonardo");
+			st.setString(2, "leobiriba10@gmail.com");
+			st.setDate(3, new java.sql.Date(sdf.parse("02/08/2003").getTime()));
+			st.setDouble(4, 3400.00);
+			st.setInt(5, 4);
 			
-			while(rs.next()) {
-				System.out.println(rs.getInt("Id")+", "+rs.getString("Name"));
-			}
-			
+			int rowsAffected = st.executeUpdate();
+			rs = st.getGeneratedKeys();
+				
+				if(rowsAffected > 0) {				
+					while(rs.next()) {
+						int id = rs.getInt(1);
+						System.out.println("Done! GeneratedKeys: " + id);
+					}
+				}
+				else {
+					System.out.println("No rows affected!");
+				}
 			
 		}
 		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		catch(ParseException e) {
 			e.printStackTrace();
 		}
 		finally{
